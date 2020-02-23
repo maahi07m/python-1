@@ -23,3 +23,19 @@ for i in d:
 d1=sorted(d.items(),key=lambda v:v[1],reverse=True)
 for k,v in d1:
     print(k,v,sep=",")
+
+-------------------------
+//// matrix
+r,c=map(int,input().split(","))
+l=input().split(",")
+l=[float(i) for i in l]
+r1=[]
+c1=[]
+a=0
+for i in range(r):
+    for j in range(c):
+        r1.append(l[a])
+        a=a+1
+    c1.append(r1)
+    r1=[]
+print(c1)
