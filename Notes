@@ -39,3 +39,48 @@ for i in range(r):
     c1.append(r1)
     r1=[]
 print(c1)
+----------------------------------
+add two polynomials
+x=int(input())
+l1=[]
+l2=[]
+for i in range(x):
+    a,b=map(int,input().split())
+    l1.append(a)
+    l2.append(b)
+
+y=int(input())
+l3=[]
+l4=[]
+for i in range(y):
+    c,d=map(int,input().split())
+    l3.append(c)
+    l4.append(d)
+    
+    
+k=[]
+d={l1[i]:l2[i] for i in range(x)}
+
+d1={l3[i]:l4[i] for i in range(y)}
+
+for i,j in d.items():
+    for m,n in d1.items():
+        if i==m:
+            s=d[i]+d1[m]
+            k.append(s)
+    else:
+        if i>m:
+            k.append(d[i])
+            
+k.reverse()
+print(k)
+s=k.count(0)
+if s==len(k):
+    print(0)
+else:
+    n=3
+    for i in k:
+         print(str(i)+"x^"+str(l1[n])+" + ",end="")
+         n=n-1
+ ------------------------------------------------
+ostfix
